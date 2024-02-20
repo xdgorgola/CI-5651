@@ -146,6 +146,10 @@ void print_usage()
 }
 
 
+/* 
+    Inicializa un arreglo de inicializacion virtual
+    n:  Tamano del arreglo
+*/
 virtual_array initialize_virtual_arr(int n)
 {
     if (n <= 0)
@@ -160,6 +164,12 @@ virtual_array initialize_virtual_arr(int n)
 }
 
 
+/* 
+    Asigna un valor a un valor de la inicializacion virtual
+    va:     Arreglo simulador de inicializacion virtual
+    i:      Posicion a asignar
+    val:    Valor a asignar
+*/
 void assign_value(virtual_array* va, int i, int val)
 {
     if (consult_position(va, i, NULL)) 
@@ -175,6 +185,12 @@ void assign_value(virtual_array* va, int i, int val)
 }
 
 
+/* 
+    Consulta un valor a un valor de la inicializacion virtual
+    va:     Arreglo simulador de inicializacion virtual
+    i:      Posicion a consultar
+    out:    Valor obtenido en caso de haber sido ya inicializado
+*/
 bool consult_position(virtual_array* va, int i, int* out)
 {
     if (0 <= va->b[i] && va->b[i] < va->ctr)
@@ -192,6 +208,10 @@ bool consult_position(virtual_array* va, int i, int* out)
 }
 
 
+/* 
+    Reinicia el sistema de inicializacion virtual
+    va:     Arreglo simulador de inicializacion virtual a reiniciar
+*/
 bool reset_virtual_array(virtual_array* va)
 {
     va->ctr = 0;
