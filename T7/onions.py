@@ -122,6 +122,4 @@ pointst = [(a,0) for a in arange(0.1, 10, 2.5)] + [(-a,0) for a in arange(0.1, 1
 pointss = [(0, -2.5), (2.5, -2.5), (2.5,0), (2.5,2.5), (0,2.5), (-2.5,2.5), (-2.5,0), (-2.5,-2.5)]
 print(onion_ch(points))
 print(onion_ch(pointst))
-print(onion_ch(pointss))    
-
-
+print(onion_ch(pointss))
