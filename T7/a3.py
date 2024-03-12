@@ -1,6 +1,7 @@
 def lps(w: str) -> tuple[list[int], int]:
     b = [-1 for _ in range(len(w))]
     j = -1
+    ps = -1
     for i in range(1,len(w)):
         while j >= 0 and w[i-1] != w[j]:
             j = b[j]
