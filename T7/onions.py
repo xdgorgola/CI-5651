@@ -106,6 +106,9 @@ def onion_ch(points: list[vector]) -> int:
         points = nch
         layers = layers + 1
 
+    if len(points) > 0:
+        layers = layers + 1
+
     for ch in chs:
         graph_ch(ch, ch, False)
 
