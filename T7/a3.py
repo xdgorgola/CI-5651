@@ -11,6 +11,6 @@ def lps(w: str) -> tuple[list[int], int]:
             ps = i
     return "" if w[0] != w[ps] and ps > 0 else w[ps:]
 
-ws = ["SEVENTY SEVEN ", "abracadabra", "arepera", "algoritmo"]
+ws = ["SEVENTY SEVEN ", "abracadabra", "arepera", "algoritmo", "aaaaa"]
 for w in ws:
     print(lps(w))
