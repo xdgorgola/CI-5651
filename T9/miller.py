@@ -11,26 +11,27 @@ def BTest(a: int, n: int):
             break
     x: int = pow(a, t, n)
     if x == 1 or x == n-1:
+        print("A")
         return True
     
     for _ in range(1, s):
         x = pow(x, 2) % n
         if x == n - 1:
+            print("B")
             return True
     return False
 
 def millRab(n: int) -> bool:
     a: int = ceil(uniform(2,n-2))
-    print(f'mra: {a}')
     return BTest(a, n)
 
 
 def millRabRep(n: int, k: int) -> bool:
-    for _ in range (0, k):
+    for i in range (0, k):
         mrn: bool = millRab(n)
-        print(f'k: {k} mrn: {mrn}')
+        print(f'k: {i} mrn: {mrn}')
         if not mrn:
             return False
     return True
 
-print(f'{millRabRep(int("1511264"*3),10)}')
+print(f'{millRabRep(int("1511263"*3), 10)}')
